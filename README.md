@@ -1,1 +1,2 @@
 # MdiomFileManager-HandMade
+Platform ::>> Windows
