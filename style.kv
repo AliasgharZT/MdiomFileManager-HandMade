@@ -1,0 +1,42 @@
+
+<FileManagerZ>:
+    register:register 
+    MDList:
+        id:register
+        ThreeLineIconListItem:
+            text:'---------------------'
+            secondary_text:'FindDisks'
+            tertiary_text:'---------------------'
+            on_press:root.create_disks()
+            IconLeftWidgetWithoutTouch: 
+                icon:'folder-search'
+# <<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>
+<Style>:
+    mn:mn 
+    tb:tb   
+    MDScreenManager:
+        id:mn 
+#------------MAIN----------
+        MDScreen:
+            name:'main'
+            MDScreen:
+                MDAnchorLayout:
+                    anchor_x:'center'
+                    anchor_y:'center'
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        size_hint:1,1
+                        MDTopAppBar:
+                            id:tb 
+                            # title:'MyFile'
+                            left_action_items:[['backburger',lambda x:root.back_file(),'Back']]
+                            right_action_items:[['information-slab-circle',lambda x:root.about(),'About']]
+                            size_hint: 1, 0.083
+                        FileManagerZ:
+                            id:fm 
+                            size_hint:1,0.9
+# -----------FAKE-----------
+        MDScreen:
+            name:'fake'
+            MDScreen:
+# --------------------FINISH--------------
